@@ -1,0 +1,34 @@
+<h2>Home</h2>
+<p>Nombre del alumno: {{ nombre }}</p>
+
+<p>Ahora en mayúscula: {{ nombre | uppercase }}</p>
+
+<p>Calificación: {{ calificacion }}</p>
+
+<p>Calificación por 10: {{ calificacion * 10}}</p>
+
+
+<input type="text" class="form-control" placeholder="Escribe tu nombre" [(ngModel)]="nombre">
+<br>
+<!-- Boton para mandar llamar al metodo cambiarValores -->
+<button type="button" class="btn btn-primary" (click)="cambiarValores()">
+Cambiar Valores
+</button>
+
+<br>
+<!-- Ejemplos de condicionales -->
+<p *ngIf="encendido">La propiedad de encendido es verdadera</p>
+
+<p *ngIf="!encendido">La propiedad de encendido es falso</p>
+
+<p *ngIf="13 > 7">Es verdadero</p>
+
+<br>
+<!-- Ejemplo de un ciclo for -->
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let persona of personas">
+        {{ persona }}
+
+    </li>
+</ul>
+
